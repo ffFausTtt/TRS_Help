@@ -52,7 +52,7 @@ namespace TRSHELP
                             var messageFrom = update.Message;
                             var user = messageFrom.From;
                             Console.WriteLine($"{user.FirstName} ({user.Id}) написал сообщение: {messageFrom.Text}");
-                            string connectionString = "Data Source=ngknn.ru;Initial Catalog=22v_Ivanov;User ID=22V;Password=123";
+                            string connectionString = @"Server=(localdb)\mssqllocaldb;Database=helpdesk;Integrated Security=True;";
                             using (SqlConnection connection = new SqlConnection(connectionString))
                             {
                                 connection.Open();
